@@ -8,5 +8,6 @@ if yes?("Would you like to configure rvm?")
   system("rvm #{@ruby_version} do rvm gemset create #{@gemset_name}")
 end
 gem('goldencobra', :git => 'ssh://git@git.ikusei.de:7999/GC/basis-modul.git')
+gem('activeadmin', :git => 'git://github.com/ikusei/active_admin.git', :require => 'activeadmin')
 system("rvm #{@ruby_version}@#{@gemset_name} do bundle install")
 generate("goldencobra:install")
